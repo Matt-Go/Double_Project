@@ -1,0 +1,1 @@
+﻿add_library(LinkedList LinkedList.cpp LinkedList.h)
