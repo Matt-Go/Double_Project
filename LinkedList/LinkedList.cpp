@@ -6,7 +6,7 @@ LinkedList::LinkedList() {
 	head = NULL;
 }
 
-// Inserts val at front of list
+// Inserts valur at front of list
 void LinkedList::insertBeg(int val) {
 	Node* temp = new Node;
 	temp->data = val;
@@ -14,7 +14,7 @@ void LinkedList::insertBeg(int val) {
 	head = temp;
 }
 
-// Inserts val at back of list
+// Inserts valur at back of list
 void LinkedList::insertEnd(int val) {
 	Node* temp = new Node;
 	temp->data = val;
@@ -29,7 +29,7 @@ void LinkedList::insertEnd(int val) {
 	}
 	curr->next = temp;
 }
-// Inserts val at index
+// Inserts valur at index
 void LinkedList ::insertAt(int index, int val) {
 	Node* temp = new Node;
 	Node* prev = new Node;
@@ -43,7 +43,7 @@ void LinkedList ::insertAt(int index, int val) {
 	temp->next = curr;
 }
 
-// Removes val from list at index
+// Removes value from list at index
 void LinkedList::remove(int index) {
 	Node* prev = new Node;
 	Node* curr = new Node;
@@ -55,7 +55,7 @@ void LinkedList::remove(int index) {
 	prev->next = curr->next;
 }
 
-// Removes val from list
+// Removes value from list
 void LinkedList::removeVal(int val) {
 	if (head->data == val) {
 		head = head->next;

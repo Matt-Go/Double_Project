@@ -2,16 +2,14 @@
 #include "ArrayList.h"
 
 // Constructs an ArrayList
-template <typename T>
-ArrayList<T>::ArrayList() {
-	arr = new T[5];
+ArrayList::ArrayList() {
+	arr = new int[5];
 	size = 0;
 	arrLength = 5;
 }
 
-// Inserts val at end of ArrayList
-template <typename T>
-void ArrayList<T>::add(T val) {
+// Inserts value at end of ArrayList
+void ArrayList::add(int val) {
 	if (size >= arrLength) {
 		resize();
 	}
@@ -19,9 +17,8 @@ void ArrayList<T>::add(T val) {
 	size++;
 }
 
-// Inserts val at index
-template <typename T>
-void ArrayList<T>::add(int index, T val) {
+// Inserts value at index
+void ArrayList::add(int index, int val) {
 	if (size >= arrLength) {
 		resize();
 	}
@@ -31,30 +28,27 @@ void ArrayList<T>::add(int index, T val) {
 	arr[index] = val;
 	size++;
 }
-// Replaces val at index
-template <typename T>
-void ArrayList<T>::replace(int index, T val) {
+
+// Replaces value at index
+void ArrayList::replace(int index, int val) {
 	arr[index] = val;
 }
 
-// Removes val at index
-template <typename T>
-void ArrayList<T>::remove(int index) {
+// Removes value at index
+void ArrayList::remove(int index) {
 	for (int i = index; i < size; i++) {
 		arr[i] = arr[i + 1];
 	}
 	size--;
 }
 
-// Gets val at index
-template <typename T>
-T ArrayList<T>::get(int index) {
+// Gets value at index
+int ArrayList::get(int index) {
 	return arr[index];
 }
 
 // Prints out contents of ArrayList
-template <typename T>
-void ArrayList<T>::print() {
+void ArrayList::print() {
 	for (int i = 0; i < size; i++) {
 		std::cout << arr[i] << " ";
 	}
@@ -62,9 +56,8 @@ void ArrayList<T>::print() {
 }
 
 // Doubles length of ArrayList
-template <typename T>
-void ArrayList<T>::resize() {
-	T* newArr = new T[2 * arrLength];
+void ArrayList::resize() {
+	int* newArr = new int[2 * arrLength];
 	for (int i = 0; i < size; i++) {
 		newArr[i] = arr[i];
 	}

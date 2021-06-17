@@ -7,22 +7,22 @@ class LinkedList {
 		// Contructor
 		LinkedList();
 
-		// Inserts val at front of list
+		// Inserts value at front of list
 		void insertBeg(int val);
 
-		// Inserts val at back of list
+		// Inserts value at back of list
 		void insertEnd(int val);
 
-		// Inserts val at index
+		// Inserts value at index
 		void insertAt(int index, int val);
 
-		// Removes val from list at index
+		// Removes value from list at index
 		void remove(int index);
 
-		// Removes val from list
+		// Removes value from list
 		void removeVal(int val);
 
-		// Gets val at index
+		// Gets value at index
 		int get(int index);
 
 		// Prints out contents of list

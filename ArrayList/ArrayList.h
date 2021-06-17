@@ -1,38 +1,37 @@
 #pragma once
 
-template <typename T>
 class ArrayList {
 
-	public:
+public:
 
-		// Constructor
-		ArrayList();
+	// Constructor
+	ArrayList();
 
-		// Inserts val at end of ArrayList
-		void add(T val);
+	// Inserts value at end of ArrayList
+	void add(int val);
 
-		// Inserts val at index
-		void add(int index, T val);
+	// Inserts value at index
+	void add(int index, int val);
 
-		// Replaces val at index
-		void replace(int index, T val);
+	// Replaces value at index
+	void replace(int index, int val);
 
-		// Removes val from index
-		void remove(int index);
+	// Removes value from index
+	void remove(int index);
 
-		// Gets val at index
-		T get(int index);
+	// Gets value at index
+	int get(int index);
 
-		// Prints out contents of ArrayList
-		void print();
+	// Prints out contents of ArrayList
+	void print();
 
-	private:
+private:
 
-		T* arr;
-		int size;
-		int arrLength;
+	int* arr;
+	int size;
+	int arrLength;
 
-		// Doubles length of ArrayList
-		void resize();
+	// Doubles length of ArrayList
+	void resize();
 
 };
